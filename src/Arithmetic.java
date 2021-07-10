@@ -1,9 +1,24 @@
 
 
-
 public class Arithmetic {
    private int a;
    private int b;
+
+    public void setA (int a) {
+        if (a > 0 ) {
+            this.a = a;
+        } else {
+            System.out.println("Ошибка! Число не может быть отрицательным числом!");
+        }
+    }
+
+    public void setB (int b) {
+        if (b > 0 ) {
+            this.b = b;
+        } else {
+            System.out.println("Ошибка! Число не может быть отрицательным числом!");
+        }
+    }
 
     public void getSum () {
         int sum = (a + b);
@@ -43,26 +58,25 @@ public class Arithmetic {
     public static void main(String[] args) {
 
         Arithmetic numbers = new Arithmetic(70,50);
-        System.out.println("Арифметические действия: ");
+        System.out.println(" Арифметические действия: ");
 
-        System.out.print( " Сумма чисел :" );
+        System.out.print( " Сумма чисел :" + '\t'+'\t' +'\t'+ '\t');
         numbers.getSum();
 
-        System.out.print( " Разность чисел :" );
+        System.out.print( " Разность чисел :" + '\t'  +'\t' + '\t');
         numbers.getDifference();
 
-        System.out.print( " Произведение чисел :" );
+        System.out.print( " Произведение чисел :"  +'\t' +'\t');
         numbers.getProductOfNumbers();
 
-        System.out.println("Среднее значение чисел: ");
+        System.out.print(" Среднее значение чисел: " + '\t');
         numbers.getAverageOfNumbers();
 
-        System.out.println("Максимальное из чисел: ");
+        System.out.print(" Максимальное из чисел: "  +  '\t');
         numbers.getMaximumOfNumbers ();
 
-        System.out.println("Минимальное из чисел: ");
+        System.out.print(" Минимальное из чисел: "   +'\t' +'\t');
         numbers.getMinimumOfNumbers ();
-
 
 
     }
