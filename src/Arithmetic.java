@@ -3,7 +3,6 @@
 public class Arithmetic {
    private int a;
    private int b;
-
     public void setA (int a) {
         if (a > 0 ) {
             this.a = a;
@@ -11,7 +10,6 @@ public class Arithmetic {
             System.out.println("Ошибка! Число не может быть отрицательным числом!");
         }
     }
-
     public void setB (int b) {
         if (b > 0 ) {
             this.b = b;
@@ -19,65 +17,47 @@ public class Arithmetic {
             System.out.println("Ошибка! Число не может быть отрицательным числом!");
         }
     }
-
-    public void getSum () {
+    public int getSum () {
         int sum = (a + b);
-        System.out.println(sum);
+        return sum;
     }
-    public void getDifference() {
+    public int getDifference() {
         int difference = (a - b);
-        System.out.println(difference);
+        return difference;
     }
-    public void getProductOfNumbers () {
+    public int getProductOfNumbers () {
         int product = (a * b);
-        System.out.println(product);
+        return product;
     }
-
-    public void getAverageOfNumbers() {
+    public int getAverageOfNumbers() {
         int average = ((a + b) / 2);
-        System.out.println(average);
+        return average;
     }
-    public void getMaximumOfNumbers () {
+    public int getMaximumOfNumbers () {
 
         int maxOfNumbers = Math.max(a, b);
-        System.out.println(maxOfNumbers);
+        return maxOfNumbers;
     }
-
-    public void getMinimumOfNumbers () {
+    public int getMinimumOfNumbers () {
 
         int minOfNumbers = Math.min(a, b);
-        System.out.println(minOfNumbers);
+        return minOfNumbers;
     }
-
     public Arithmetic (int a, int b) {
 
         this.a = a;
         this.b = b;
 }
-
     public static void main(String[] args) {
 
         Arithmetic numbers = new Arithmetic(70,50);
         System.out.println(" Арифметические действия: ");
-
-        System.out.print( " Сумма чисел :" + '\t'+'\t' +'\t'+ '\t');
-        numbers.getSum();
-
-        System.out.print( " Разность чисел :" + '\t'  +'\t' + '\t');
-        numbers.getDifference();
-
-        System.out.print( " Произведение чисел :"  +'\t' +'\t');
-        numbers.getProductOfNumbers();
-
-        System.out.print(" Среднее значение чисел: " + '\t');
-        numbers.getAverageOfNumbers();
-
-        System.out.print(" Максимальное из чисел: "  +  '\t');
-        numbers.getMaximumOfNumbers ();
-
-        System.out.print(" Минимальное из чисел: "   +'\t' +'\t');
-        numbers.getMinimumOfNumbers ();
-
+        System.out.println( " Сумма чисел :" + '\t'+'\t' +'\t'+ '\t' + numbers.getSum());
+        System.out.println( " Разность чисел :" + '\t'  +'\t' + '\t' + numbers.getDifference());
+        System.out.println( " Произведение чисел :"  +'\t' +'\t' + numbers.getProductOfNumbers());
+        System.out.println(" Среднее значение чисел: " + '\t' + numbers.getAverageOfNumbers());
+        System.out.println(" Максимальное из чисел: "  +  '\t' + numbers.getMaximumOfNumbers ());
+        System.out.println(" Минимальное из чисел: "   +'\t' +'\t' + numbers.getMinimumOfNumbers ());
 
     }
 }
